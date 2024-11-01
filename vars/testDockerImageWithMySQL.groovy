@@ -43,7 +43,7 @@ def call(Map params = [:]) {
         sh """
         docker run -d --name ${petclinicContainerName} \
             --link ${mysqlContainerName}:mysql \
-            -e MYSQL_URL=jdbc:mysql://mysql:3306/${mysqlDatabase} \
+            -e MYSQL_URL=jdbc:mysql://mysql:3306/${mysqlDatabase}?useSSL=false&allowPublicKeyRetrieval=true \
             -e MYSQL_USER=${mysqlUser} \
             -e MYSQL_PASSWORD=${mysqlPassword} \
             -e MYSQL_ROOT_PASSWORD=${mysqlRootPassword} \
