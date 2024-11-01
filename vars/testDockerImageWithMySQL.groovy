@@ -71,8 +71,8 @@ def call(Map params = [:]) {
 
         echo "PetClinic and MySQL containers are running and healthy."
     } finally {
-        // Clean up containers
+       /* // Clean up containers
         sh "docker stop ${mysqlContainerName} ${petclinicContainerName} || true"
-        sh "docker rm ${mysqlContainerName} ${petclinicContainerName} || true" 
+        sh "docker rm ${mysqlContainerName} ${petclinicContainerName} || true" */
     }
 }
