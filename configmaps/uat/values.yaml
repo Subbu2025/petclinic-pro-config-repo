@@ -1,4 +1,4 @@
-# File: configmap-uat.yaml
+# File: configmap-dev-qa.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -10,21 +10,18 @@ data:
   EKS_CLUSTER_NAME: "devops-petclinicapp-dev-ap-south-1"
 
   # Git configurations
-  GIT_REPO: "https://github.com/SubbuTechTutorials/spring-petclinic.git"
-  GIT_BRANCH: "main"
+  GIT_REPO: "https://github.com/Subbu2025/spring-petclinic-pro.git"
+  GIT_BRANCH: "develop"
 
   # Trivy configurations
   TRIVY_DB_CACHE: "/var/lib/jenkins/trivy-db"
 
   # Docker ECR configurations
-  ECR_REPO_URL: "905418425077.dkr.ecr.ap-south-1.amazonaws.com/qa-petclinic"
+  ECR_REPO_URL: "905418425077.dkr.ecr.ap-south-1.amazonaws.com/dev-petclinic-pro"
   AWS_REGION_ECR: "ap-south-1"
 
-  # MySQL configurations
-  MYSQL_DATABASE: "petclinic"  # Database name for MySQL
-
   # SonarQube configurations (only non-sensitive data)
-  SONARQUBE_PROJECT_KEY: "PetClinic"
+  SONARQUBE_PROJECT_KEY: "petclinic"
 
   # Slack configuration
   SLACK_CHANNEL: "#project-petclinic"
