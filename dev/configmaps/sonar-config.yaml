@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: sonar-config
-  namespace: dev
-data:
-  SONAR_URL: "http://44.201.120.105:9000"
-  SONAR_PROJECT_KEY: "petclinic-dev"
