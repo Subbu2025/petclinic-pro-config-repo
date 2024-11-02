@@ -1,1 +1,11 @@
-# Values specific to uat environment
+image:
+  tag: "8.4"
+
+mysql:
+  database: "petclinic"
+
+persistence:
+  storageClass: "mysql-gp2-uat"  # Specify storage class name for dev-qa
+
+secrets:
+  mysqlSecretName: "db-secrets-uat"  # Kubernetes secret name containing MySQL credentials
