@@ -1,0 +1,30 @@
+# File: configmap-dev-qa.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config-dev-qa
+  namespace: petclinic-dev-qa
+data:
+  # AWS and EKS configurations
+  AWS_REGION: "ap-south-1"
+  EKS_CLUSTER_NAME: "devops-petclinicapp-dev-ap-south-1"
+
+  # Git configurations
+  GIT_REPO: "https://github.com/SubbuTechTutorials/spring-petclinic.git"
+  GIT_BRANCH: "develop"
+
+  # Trivy configurations
+  TRIVY_DB_CACHE: "/var/lib/jenkins/trivy-db"
+
+  # Docker ECR configurations
+  ECR_REPO_URL: "905418425077.dkr.ecr.ap-south-1.amazonaws.com/qa-petclinic"
+  AWS_REGION_ECR: "ap-south-1"
+
+  # MySQL configurations
+  MYSQL_DATABASE: "petclinic"  # Database name for MySQL
+
+  # SonarQube configurations (only non-sensitive data)
+  SONARQUBE_PROJECT_KEY: "PetClinic"
+
+  # Slack configuration
+  SLACK_CHANNEL: "#project-petclinic"
