@@ -2,3 +2,4 @@ namespace: petclinic-dev-qa
 secrets:
   awsSecretKey: "dev-qa/petclinic-secrets"
   refreshInterval: "1h"
+  secretStoreName: "aws-secrets-manager"
