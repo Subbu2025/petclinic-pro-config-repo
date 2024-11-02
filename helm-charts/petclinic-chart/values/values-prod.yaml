@@ -6,4 +6,4 @@ mysql:
   database: "petclinic"
 
 secrets:
-  mysqlSecretName: "db-secrets-uat"  # Kubernetes secret name containing MySQL credentials
+  mysqlSecretName: "db-secrets-prod"  # Kubernetes secret name containing MySQL credentials
