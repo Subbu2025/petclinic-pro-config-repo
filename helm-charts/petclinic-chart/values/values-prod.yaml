@@ -1,1 +1,9 @@
-# Values specific to prod environment
+image:
+  repository: "905418425077.dkr.ecr.ap-south-1.amazonaws.com/qa-petclinic"
+  tag: "latest"
+
+mysql:
+  database: "petclinic"
+
+secrets:
+  mysqlSecretName: "db-secrets-uat"  # Kubernetes secret name containing MySQL credentials
