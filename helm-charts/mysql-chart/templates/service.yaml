@@ -1,12 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-service-prod
-  namespace: prod
+  name: mysql-service-prod       # Service name specific to the production environment
+  namespace: prod                # Namespace set to 'prod' to scope this service to production
+  labels:
+    app: mysql                   # Label for identification
+    environment: production      # Optional label to distinguish environments
 spec:
-  type: ClusterIP  
+  type: ClusterIP                # Internal-only access
   ports:
-    - port: 3306
-      targetPort: 3306
+    - port: 3306                 # External port on the service
+      targetPort: 3306           # Target port on the MySQL container
+      protocol: TCP              # TCP protocol for MySQL communication
   selector:
-    app: mysql
+    app: mysql                   # Selects the pods with the label 'app: mysql' in the 'prod' namespace
