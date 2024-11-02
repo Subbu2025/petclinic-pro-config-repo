@@ -1,0 +1,5 @@
+namespace: petclinic-uat
+secrets:
+  awsSecretKey: "uat/petclinic-secrets"
+  refreshInterval: "1h"
+  secretStoreName: "aws-secrets-manager"
