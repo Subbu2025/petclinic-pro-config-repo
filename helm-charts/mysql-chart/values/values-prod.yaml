@@ -1,1 +1,11 @@
-# Values specific to prod environment
+image:
+  tag: "8.4"
+
+mysql:
+  database: "petclinic"
+
+persistence:
+  storageClass: "mysql-gp2-prod"  # Specify storage class name for dev-qa
+
+secrets:
+  mysqlSecretName: "db-secrets-prod"  # Kubernetes secret name containing MySQL credentials
